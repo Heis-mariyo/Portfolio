@@ -19,7 +19,7 @@ html {
 body {
     margin: 0;
     font-family: var(--font-poppins);
-    background: linear-gradient(135deg, #0F2027, #203A43, #2C5364);
+    background-color: #0f172a;
     color: var(--color-text-light);
 }
 
@@ -36,4 +36,13 @@ body {
 .contact-form textarea {
     @apply resize-none;
     min-height: 120px;
+}
+
+/* Glow effect for header */
+.header-glow {
+    box-shadow: 0 0 20px rgba(0, 201, 167, 0.4), 0 0 40px rgba(0, 201, 167, 0.2), 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.header-glow:hover {
+    box-shadow: 0 0 30px rgba(0, 201, 167, 0.6), 0 0 50px rgba(0, 201, 167, 0.3), 0 10px 40px rgba(0, 0, 0, 0.4);
 }

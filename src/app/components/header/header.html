@@ -1,6 +1,6 @@
 <header class="sticky top-4 left-0 w-full z-50 pointer-events-none">
 <!-- Desktop: Single Centers Floating Pill (80% width) -->
-  <div class="hidden md:flex pointer-events-auto mx-auto w-[80%] max-w-7xl h-16 rounded-full bg-white/80 backdrop-blur-xl shadow-lg border border-white/50 items-center justify-between px-6 transition-all duration-300">
+  <div class="hidden md:flex pointer-events-auto mx-auto w-[80%] max-w-7xl h-16 rounded-full bg-gradient-to-r from-white/70 via-white/80 to-white/70 backdrop-blur-xl border border-primary/20 items-center justify-between px-6 transition-all duration-300 hover:border-primary/40 header-glow">
     <!-- Logo -->
     <a routerLink="/" class="flex items-center gap-2 group cursor-pointer text-decoration-none">
       <div class="h-9 w-9 rounded-full bg-slate-900 flex items-center justify-center text-primary font-serif font-bold text-xl shadow-md group-hover:scale-105 transition-transform">
@@ -9,11 +9,11 @@
     </a>
 
     <!-- Desktop Nav -->
-    <nav class="flex gap-8 text-sm font-medium text-slate-600 items-center justify-center">
-      <a routerLink="/" routerLinkActive="text-slate-900 font-bold bg-slate-100/50 px-3 py-1 rounded-full" [routerLinkActiveOptions]="{exact: true}" class="hover:text-slate-900 transition-all">Home</a>
-      <a routerLink="/about" routerLinkActive="text-slate-900 font-bold bg-slate-100/50 px-3 py-1 rounded-full" class="hover:text-slate-900 transition-all">About</a>
-      <a routerLink="/projects" routerLinkActive="text-slate-900 font-bold bg-slate-100/50 px-3 py-1 rounded-full" class="hover:text-slate-900 transition-all">Projects</a>
-      <a routerLink="/contact" routerLinkActive="text-slate-900 font-bold bg-slate-100/50 px-3 py-1 rounded-full" class="hover:text-slate-900 transition-all">Contact</a>
+    <nav class="flex gap-2 text-sm font-medium text-slate-600 items-center justify-center">
+      <a routerLink="/" routerLinkActive="text-white bg-gradient-to-r from-primary to-slate-900 shadow-md" [routerLinkActiveOptions]="{exact: true}" class="px-4 py-2 rounded-full hover:bg-slate-100 transition-all flex items-center gap-2"><i class="fas fa-home"></i>Home</a>
+      <a routerLink="/about" routerLinkActive="text-white bg-gradient-to-r from-primary to-slate-900 shadow-md" class="px-4 py-2 rounded-full hover:bg-slate-100 transition-all flex items-center gap-2"><i class="fas fa-user"></i>About</a>
+      <a routerLink="/projects" routerLinkActive="text-white bg-gradient-to-r from-primary to-slate-900 shadow-md" class="px-4 py-2 rounded-full hover:bg-slate-100 transition-all flex items-center gap-2"><i class="fas fa-briefcase"></i>Projects</a>
+      <a routerLink="/contact" routerLinkActive="text-white bg-gradient-to-r from-primary to-slate-900 shadow-md" class="px-4 py-2 rounded-full hover:bg-slate-100 transition-all flex items-center gap-2"><i class="fas fa-envelope"></i>Contact</a>
     </nav>
 
   </div>
@@ -21,12 +21,12 @@
   <!-- Mobile: Split Islands design with expanded right pill -->
   <div class="md:hidden flex w-full items-center px-4 gap-2">
     <!-- Left Island: Logo (Fixed) -->
-    <a routerLink="/" class="pointer-events-auto h-12 w-12 flex-none rounded-full bg-slate-900 backdrop-blur-xl shadow-lg border border-white/80 flex items-center justify-center active:scale-95 transition-transform">
+    <a routerLink="/" class="pointer-events-auto h-14 w-14 flex-none rounded-full bg-slate-900 backdrop-blur-xl border-2 border-white/80 flex items-center justify-center active:scale-95 transition-all relative" style="box-shadow: 0 0 15px rgba(0, 201, 167, 0.3), 0 0 30px rgba(0, 201, 167, 0.15);\">
       <div class="font-serif font-bold text-xl text-primary">M</div>
     </a>
 
     <!-- Right Island: Text + Controls (Expanded) -->
-    <div class="pointer-events-auto h-12 flex-1 rounded-full bg-white/80 backdrop-blur-xl shadow-lg border border-white/80 flex items-center justify-between px-2 pl-4">
+    <div class="pointer-events-auto h-14 flex-1 justify-end rounded-full bg-linear-to-r from-white/70 via-white/80 to-white/70 backdrop-blur-xl border border-primary/20 flex items-center justify-between px-4 transition-all header-glow" style="box-shadow: 0 0 20px rgba(0, 201, 167, 0.3), 0 0 40px rgba(0, 201, 167, 0.1);">
      
       <!-- Controls -->
       <div class="flex items-center gap-2 flex-none">
@@ -41,22 +41,22 @@
 
   <!-- Mobile Dropdown Menu (Floating below right island) -->
   @if (isMobileMenuOpen) {
-  <div class="pointer-events-auto md:hidden absolute top-20 right-4 w-64 bg-white/80 backdrop-blur-xl rounded-2xl shadow-xl border border-white/30 animate-fade-in-down p-2 origin-top-right">
+  <div class="pointer-events-auto md:hidden absolute top-20 right-4 w-64 bg-white/90 backdrop-blur-xl rounded-2xl shadow-2xl border-2 border-primary/20 animate-fade-in-down p-3 origin-top-right">
     <nav class="flex flex-col space-y-1">
-      <div class="px-4 py-2 border-b border-slate-100 mb-1">
-        <span class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Menu</span>
+      <div class="px-4 py-2 border-b border-primary/10 mb-2">
+        <span class="text-xs font-semibold text-primary uppercase tracking-wider">Navigation</span>
       </div>
-      <a routerLink="/" (click)="closeMobileMenu()" routerLinkActive="bg-slate-100 text-slate-900 font-semibold" [routerLinkActiveOptions]="{exact: true}" class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 hover:bg-slate-50 transition-all">
-        <i class="fas fa-home"></i> Home
+      <a routerLink="/" (click)="closeMobileMenu()" routerLinkActive="bg-gradient-to-r from-primary to-slate-900 text-white shadow-md" [routerLinkActiveOptions]="{exact: true}" class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-700 hover:bg-slate-100 transition-all font-medium">
+        <i class="fas fa-home w-5"></i> Home
       </a>
-      <a routerLink="/about" (click)="closeMobileMenu()" routerLinkActive="bg-slate-100 text-slate-900 font-semibold" class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 hover:bg-slate-50 transition-all">
-        <i class=""></i> About
+      <a routerLink="/about" (click)="closeMobileMenu()" routerLinkActive="bg-gradient-to-r from-primary to-slate-900 text-white shadow-md" class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-700 hover:bg-slate-100 transition-all font-medium">
+        <i class="fas fa-user w-5"></i> About
       </a>
-      <a routerLink="/projects" (click)="closeMobileMenu()" routerLinkActive="bg-slate-100 text-slate-900 font-semibold" class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 hover:bg-slate-50 transition-all">
-        <i class=""></i> Projects
+      <a routerLink="/projects" (click)="closeMobileMenu()" routerLinkActive="bg-gradient-to-r from-primary to-slate-900 text-white shadow-md" class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-700 hover:bg-slate-100 transition-all font-medium">
+        <i class="fas fa-briefcase w-5"></i> Projects
       </a>
-      <a routerLink="/contact" (click)="closeMobileMenu()" routerLinkActive="bg-slate-100 text-slate-900 font-semibold" class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-600 hover:bg-slate-50 transition-all">
-            <i class=""></i> Contact  
+      <a routerLink="/contact" (click)="closeMobileMenu()" routerLinkActive="bg-gradient-to-r from-primary to-slate-900 text-white shadow-md" class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-700 hover:bg-slate-100 transition-all font-medium">
+            <i class="fas fa-envelope w-5"></i> Contact  
       </a>  
     </nav>
   </div>
