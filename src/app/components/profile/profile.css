@@ -1,0 +1,20 @@
+.profile-shell {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.profile-image {
+	width: clamp(11rem, 24vw, 14rem);
+	aspect-ratio: 1 / 1;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 2px solid color-mix(in srgb, var(--color-primary) 55%, #475569);
+	box-shadow: 0 10px 30px rgb(0 0 0 / 34%), 0 0 24px rgb(16 185 129 / 22%);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-image:hover {
+	transform: scale(1.04);
+	box-shadow: 0 12px 36px rgb(0 0 0 / 38%), 0 0 36px rgb(16 185 129 / 30%);
+}

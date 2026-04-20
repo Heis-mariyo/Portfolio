@@ -1,0 +1,38 @@
+.about-shell {
+	max-width: 68rem;
+	text-align: center;
+}
+
+.about-title {
+	margin-bottom: 2.5rem;
+}
+
+.about-grid {
+	display: grid;
+	gap: 2.5rem;
+	align-items: center;
+}
+
+.about-profile-wrap {
+	display: flex;
+	justify-content: center;
+}
+
+.about-copy {
+	text-align: left;
+}
+
+.about-paragraph {
+	margin: 0;
+}
+
+.about-actions {
+	margin-top: 2.25rem;
+}
+
+@media (min-width: 900px) {
+	.about-grid {
+		grid-template-columns: auto minmax(0, 1fr);
+		gap: 3.25rem;
+	}
+}
